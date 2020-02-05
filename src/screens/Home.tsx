@@ -3,7 +3,7 @@ import Realm from 'realm';
 import {View, StyleSheet} from 'react-native';
 
 import TextComponent from '../components/Text';
-import Button from '../components/button';
+import Button from '../components/Button';
 
 export default class Home extends React.Component<{
   navigation: any;
@@ -35,21 +35,15 @@ export default class Home extends React.Component<{
         <TextComponent text="Realm example" />
         <Button
           title="Register"
-          customClick={() => navigation.navigate('Register')}
+          onPress={() => navigation.navigate('Register')}
         />
-        <Button
-          title="Update"
-          customClick={() => navigation.navigate('Update')}
-        />
-        <Button title="View" customClick={() => navigation.navigate('View')} />
+        <Button title="Update" onPress={() => navigation.navigate('Update')} />
+        <Button title="View" onPress={() => navigation.navigate('View')} />
         <Button
           title="View All"
-          customClick={() => navigation.navigate('ViewAll')}
+          onPress={() => navigation.navigate('ViewAll')}
         />
-        <Button
-          title="Delete"
-          customClick={() => navigation.navigate('Delete')}
-        />
+        <Button title="Delete" onPress={() => navigation.navigate('Delete')} />
       </View>
     );
   }

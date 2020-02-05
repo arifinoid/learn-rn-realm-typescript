@@ -9,7 +9,7 @@ import {
 import Realm from 'realm';
 
 import CustomTextInput from '../components/TextInput';
-import Button from '../components/button';
+import Button from '../components/Button';
 
 export default class Register extends React.Component<
   {navigation: any},
@@ -97,7 +97,7 @@ export default class Register extends React.Component<
               // eslint-disable-next-line react-native/no-inline-styles
               style={{textAlignVertical: 'top'}}
             />
-            <Button title="Submit" customClick={this.registerUser.bind(this)} />
+            <Button title="Submit" onPress={this.registerUser.bind(this)} />
           </KeyboardAvoidingView>
         </ScrollView>
       </View>

@@ -2,13 +2,13 @@ import React from 'react';
 import {TouchableOpacity, StyleSheet, Text} from 'react-native';
 
 interface IProps {
-  customClick: () => void;
+  onPress: () => void;
   title: string;
 }
 
-const Button: React.FC<IProps> = ({customClick, title}) => {
+const Button: React.FC<IProps> = ({onPress, title}) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={customClick}>
+    <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
